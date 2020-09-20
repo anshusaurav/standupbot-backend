@@ -1,0 +1,1 @@
+CREATE TABLE "public"."standup"("id" UUID NOT NULL DEFAULT gen_random_uuid(), "creator_id" UUID NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("creator_id") REFERENCES "public"."users"("id") ON UPDATE restrict ON DELETE restrict);
