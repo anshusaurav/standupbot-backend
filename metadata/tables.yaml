@@ -3,10 +3,19 @@
     name: standup
 - table:
     schema: public
+    name: standup_channel
+- table:
+    schema: public
     name: standup_participant
 - table:
     schema: public
     name: standup_question
+- table:
+    schema: public
+    name: standup_response
+- table:
+    schema: public
+    name: standup_schedule
 - table:
     schema: public
     name: users
