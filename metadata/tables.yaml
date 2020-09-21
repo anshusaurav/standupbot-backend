@@ -1,1 +1,21 @@
-[]
+- table:
+    schema: public
+    name: online_users
+- table:
+    schema: public
+    name: standup
+- table:
+    schema: public
+    name: standup_channels
+- table:
+    schema: public
+    name: standup_participant
+- table:
+    schema: public
+    name: standup_question
+- table:
+    schema: public
+    name: standup_schedule
+- table:
+    schema: public
+    name: users
