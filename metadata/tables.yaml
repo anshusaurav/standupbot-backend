@@ -53,6 +53,10 @@
 - table:
     schema: public
     name: standup_schedule
+  object_relationships:
+  - name: standup
+    using:
+      foreign_key_constraint_on: standup_id
 - table:
     schema: public
     name: users
