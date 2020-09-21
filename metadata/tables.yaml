@@ -1,18 +1,55 @@
 - table:
     schema: public
     name: standup
+  object_relationships:
+  - name: standup_schedule
+    using:
+      foreign_key_constraint_on: schedule_id
+  - name: user
+    using:
+      foreign_key_constraint_on: created_by
+  array_relationships:
+  - name: standup_channels
+    using:
+      foreign_key_constraint_on:
+        column: standup_id
+        table:
+          schema: public
+          name: standup_channel
 - table:
     schema: public
     name: standup_channel
+  object_relationships:
+  - name: standup
+    using:
+      foreign_key_constraint_on: standup_id
 - table:
     schema: public
     name: standup_participant
+  object_relationships:
+  - name: standup
+    using:
+      foreign_key_constraint_on: standup_id
 - table:
     schema: public
     name: standup_question
+  object_relationships:
+  - name: standup
+    using:
+      foreign_key_constraint_on: standup_id
+  - name: user
+    using:
+      foreign_key_constraint_on: author_id
 - table:
     schema: public
     name: standup_response
+  object_relationships:
+  - name: standup
+    using:
+      foreign_key_constraint_on: standup_id
+  - name: standup_question
+    using:
+      foreign_key_constraint_on: question_id
 - table:
     schema: public
     name: standup_schedule
